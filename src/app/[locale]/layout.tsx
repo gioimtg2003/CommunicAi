@@ -8,15 +8,23 @@ import '../globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  applicationName: 'CommunicAI',
   title: 'CommunicAI',
   description:
     'Virtual assistant helps you learn English communication effectively in real-time.',
   authors: [
     {
       name: 'CommunicAI',
-      url: 'https://nguyenconggioi.me',
+      url: 'https://communicai.nguyenconggioi.me',
     },
   ],
+  keywords: [
+    'CommunicAI',
+    'AI Virtual Assistant',
+    'English Learning',
+    'Communication with AI',
+  ],
+
   viewport: {
     initialScale: 1,
     width: 'device-width',
