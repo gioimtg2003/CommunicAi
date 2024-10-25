@@ -2,7 +2,6 @@ import { ILocaleParams } from '@/interfaces';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Viewport } from 'next/dist/lib/metadata/types/extra-types';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -15,18 +14,17 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'CommunicAI',
-      url: 'https://communicai.com',
+      url: 'https://nguyenconggioi.me',
     },
   ],
+  viewport: {
+    initialScale: 1,
+    width: 'device-width',
+    maximumScale: 1,
+  },
 };
 
 export const runtime = 'edge';
-
-export const viewport: Viewport = {
-  initialScale: 1,
-  width: 'device-width',
-  maximumScale: 1,
-};
 
 export default async function RootLayout({
   children,
