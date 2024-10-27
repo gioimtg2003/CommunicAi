@@ -1,27 +1,138 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-indigo-100/40 from-10% via-blue-200/40 via-30% to-violet-300/70 to-90% dark:bg-gray-800;
+  }
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: #4338ca;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYREGULAR.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 100;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYULTRALIGHTITALIC.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 200;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYTHINITALIC.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYLIGHTITALIC.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYMEDIUM.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 600;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYSEMIBOLDITALIC.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBOLD.woff) format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 800;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYHEAVYITALIC.woff)
+      format('woff');
+}
+@font-face {
+  font-family: sf pro display;
+  font-style: italic;
+  font-weight: 900;
+  src:
+    local('SF Pro Display'),
+    url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBLACKITALIC.woff)
+      format('woff');
 }

@@ -1,5 +1,9 @@
 {
-    "Friendly": "Friendly",
-    "Intelligent": "Intelligent",
-    "Approachable": "Approachable"
+  "Friendly": "Friendly",
+  "Intelligent": "Intelligent",
+  "Approachable": "Approachable",
+  "Home": "Home",
+  "About": "About",
+  "Contact": "Contact",
+  "Language": "Language"
 }

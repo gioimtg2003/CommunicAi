@@ -2,10 +2,15 @@ import { ILocaleParams } from '@/interfaces';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { ThemeProvider } from 'next-themes';
 import { Inter } from 'next/font/google';
+
 import '../globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   applicationName: 'CommunicAI',
@@ -39,13 +44,14 @@ export default async function RootLayout({
   params: { locale },
 }: Readonly<ILocaleParams>) {
   const messages = await getMessages({ locale });
-  console.log(messages);
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider attribute='class' defaultTheme='light'>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
