@@ -5,14 +5,10 @@ import ShinyButton from '@/components/ui/shiny-button';
 import TypingAnimation from '@/components/ui/typing-animation';
 import WordPullUp from '@/components/ui/word-pull-up';
 import { cn } from '@/lib/utils';
-import dynamic from 'next/dynamic';
 import { Knewave } from 'next/font/google';
 import { useState } from 'react';
 
-const SplineReact = dynamic(() => import('@splinetool/react-spline/next'), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
+import Spline from '@splinetool/react-spline';
 
 const sedgwick = Knewave({
   weight: ['400'],
@@ -27,7 +23,7 @@ export default function Home() {
       <Header />
       <main className='min-h-screen w-full'>
         <section className='relative top-0 z-20 h-screen w-full'>
-          <SplineReact
+          <Spline
             onLoad={() => {
               console.log('Background loaded');
               setLoadBg(true);
@@ -35,7 +31,7 @@ export default function Home() {
             className='absolute inset-x-0 bottom-0 z-0 h-[90%] w-full'
             scene='https://prod.spline.design/nU9TF4-gfTqOrstp/scene.splinecode'
           />
-          <SplineReact
+          <Spline
             onLoad={() => {
               console.log('Bot loaded');
               setLoadBot(true);
