@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic';
 import { Knewave } from 'next/font/google';
 import { useState } from 'react';
 
-const SplineReact = dynamic(() => import('@splinetool/react-spline'), {
+const SplineReact = dynamic(() => import('@splinetool/react-spline/next'), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
