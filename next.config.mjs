@@ -11,7 +11,6 @@ const nextConfig = {
     experimental: {
         optimizePackageImports: ['icon-library'],
     },
-    serverExternalPackages: ['framer-motion'],
 
 };
 
