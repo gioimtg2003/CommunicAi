@@ -1,14 +1,21 @@
 import { cn } from '@/lib/utils';
+import SplineNext from '@splinetool/react-spline/next';
 import dynamic from 'next/dynamic';
 import { Knewave } from 'next/font/google';
 
-const Header = dynamic(() => import('@/components/common/header/Header'));
-const ShinyButton = dynamic(() => import('@/components/ui/shiny-button'));
+const Header = dynamic(() => import('@/components/common/header/Header'), {
+  ssr: false,
+});
+const ShinyButton = dynamic(() => import('@/components/ui/shiny-button'), {
+  ssr: false,
+});
 const TypingAnimation = dynamic(
-  () => import('@/components/ui/typing-animation')
+  () => import('@/components/ui/typing-animation'),
+  { ssr: false }
 );
-const WordPullUp = dynamic(() => import('@/components/ui/word-pull-up'));
-const SplineNext = dynamic(() => import('@splinetool/react-spline/next'));
+const WordPullUp = dynamic(() => import('@/components/ui/word-pull-up'), {
+  ssr: false,
+});
 
 const sedgwick = Knewave({
   weight: ['400'],

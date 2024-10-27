@@ -19,10 +19,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "next build && next bundle-analyzer",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.0.1",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-popover": "^1.1.2",
     "@splinetool/react-spline": "^4.0.0",
